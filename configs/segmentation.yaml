@@ -1,0 +1,40 @@
+# Customer lifecycle and value segmentation rules
+# These rules are deterministic and evaluated top-down
+
+version: "1.0.0"
+last_updated: "2026-01-01"
+
+lifecycle_stages:
+  - stage: "Active"
+    recency_max: 30
+    description: "Engaged customers with recent activity"
+
+  - stage: "At-Risk"
+    recency_min: 31
+    recency_max: 90
+    description: "Customers showing early signs of disengagement"
+
+  - stage: "Dormant"
+    recency_min: 91
+    recency_max: 180
+    description: "Inactive customers requiring reactivation efforts"
+
+  - stage: "Churned"
+    recency_min: 181
+    description: "Customers considered lost without intervention"
+
+value_segments:
+  - segment: "High Value"
+    percentile_min: 80
+    percentile_max: 100
+    description: "Top revenue-contributing customers"
+
+  - segment: "Medium Value"
+    percentile_min: 40
+    percentile_max: 79
+    description: "Core customers with growth potential"
+
+  - segment: "Low Value"
+    percentile_min: 0
+    percentile_max: 39
+    description: "Low spend or infrequent customers"

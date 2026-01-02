@@ -1,0 +1,25 @@
+# Risk score categorization thresholds
+# Scores are on a 0–100 scale
+
+version: "1.0.0"
+score_scale: "0-100"
+last_updated: "2026-01-01"
+
+risk_thresholds:
+  - category: "Low"
+    score_min: 0
+    score_max: 30
+    description: "Healthy customers with stable engagement"
+    recommended_action: "Maintain relationship, upsell opportunities"
+
+  - category: "Medium"
+    score_min: 31
+    score_max: 60
+    description: "Early warning signs of disengagement"
+    recommended_action: "Proactive outreach and engagement campaigns"
+
+  - category: "High"
+    score_min: 61
+    score_max: 100
+    description: "Customers at significant risk of churn"
+    recommended_action: "Immediate intervention and retention offers"

@@ -1,0 +1,15 @@
+# Risk signal weights
+# Weights must sum to 1.0
+
+version: "1.0.0"
+last_updated: "2026-01-01"
+
+signal_weights:
+  recency_signal: 0.40
+  frequency_drop_signal: 0.25
+  spend_drop_signal: 0.35
+
+notes:
+  recency_signal: "Strongest early churn indicator"
+  spend_drop_signal: "Declining spend precedes disengagement"
+  frequency_drop_signal: "Lagging but meaningful behavioral change"

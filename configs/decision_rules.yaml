@@ -1,0 +1,75 @@
+# Decision rules mapping risk level and value segment to actions
+# Rules are evaluated top-down (first match wins)
+
+version: "1.0.0"
+last_updated: "2026-01-01"
+
+default_action:
+  action: "Monitor"
+  priority: "Low"
+  rationale: "Unclassified or edge-case customer"
+
+rules:
+
+  # -------------------------------
+  # HIGH RISK
+  # -------------------------------
+  - risk_level: "High"
+    value_contains: "High Value"
+    action: "Retention incentive + personal outreach"
+    priority: "High"
+    rationale: "High-value customers at churn risk require immediate attention"
+
+  - risk_level: "High"
+    value_contains: "Medium Value"
+    action: "Targeted win-back offer"
+    priority: "High"
+    rationale: "Medium-value customers justify targeted retention"
+
+  - risk_level: "High"
+    value_contains: "Low Value"
+    action: "Automated reactivation campaign"
+    priority: "Medium"
+    rationale: "Low-value churn handled via scalable automation"
+
+  # -------------------------------
+  # MEDIUM RISK
+  # -------------------------------
+  - risk_level: "Medium"
+    value_contains: "High Value"
+    action: "Preventive engagement (loyalty program, nudges)"
+    priority: "Medium"
+    rationale: "Prevent high-value customer decay"
+
+  - risk_level: "Medium"
+    value_contains: "Medium Value"
+    action: "Cross-sell recommendation campaign"
+    priority: "Medium"
+    rationale: "Increase engagement and value"
+
+  - risk_level: "Medium"
+    value_contains: "Low Value"
+    action: "Engagement nurture sequence"
+    priority: "Low"
+    rationale: "Low-touch automated nurturing"
+
+  # -------------------------------
+  # LOW RISK
+  # -------------------------------
+  - risk_level: "Low"
+    value_contains: "High Value"
+    action: "Upsell premium offerings"
+    priority: "Medium"
+    rationale: "Healthy high-value customers are upsell candidates"
+
+  - risk_level: "Low"
+    value_contains: "Medium Value"
+    action: "Cross-sell complementary products"
+    priority: "Low"
+    rationale: "Expand wallet share"
+
+  - risk_level: "Low"
+    value_contains: "Low Value"
+    action: "Maintain relationship (standard communications)"
+    priority: "Low"
+    rationale: "Routine relationship maintenance"
