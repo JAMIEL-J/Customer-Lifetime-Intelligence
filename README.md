@@ -29,6 +29,11 @@ This repository contains an **end-to-end customer analytics and decision-support
 <tr>
 <td width="50%">
 
+## 🎥 Live Demo
+
+> 🔗 **[View Live Demo](https://customer-lifetime-intelligence.streamlit.app/)**
+---
+
 ### 🎯 What This System Delivers
 
 - **Customer-Level Features** – RFM metrics, trends, behavioral signals
@@ -265,12 +270,6 @@ customer-lifecycle-intelligence/
 | [📖 Data Dictionary](docs/data_dictionary.md) | Schema definitions |
 | [⚖️ Decision Logic](docs/decision_logic.md) | Segmentation & action rules |
 | [📋 Assumptions](docs/assumptions.md) | Business & analytical assumptions |
-
----
-
-## 🎥 Live Demo
-
-> 🔗 **[View Live Demo](https://customer-lifetime-intelligence.streamlit.app/)** 
 
 ---
 
