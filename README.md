@@ -270,7 +270,7 @@ customer-lifecycle-intelligence/
 
 ## 🎥 Live Demo
 
-> 🔗 **[View Live Demo](https://your-streamlit-app.streamlit.app)** *(Update with your deployment link)*
+> 🔗 **[View Live Demo](https://customer-lifetime-intelligence.streamlit.app/)** 
 
 ---
 
